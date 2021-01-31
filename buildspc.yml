@@ -1,0 +1,14 @@
+version: 0.2
+
+
+build:
+    commands:
+      - echo Build started on `date`
+      - mvn install
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - mvn package
+  artifacts:
+     files:
+        - target/gameoflife.war
